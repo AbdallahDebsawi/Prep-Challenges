@@ -59,8 +59,11 @@ const sumNums = (arr) => {
 const reverseArray = (arr) => {
     // write your code here
     let reversedArr = [];
+    let reversedArrIndex = 0;
     for (let index = arr.length - 1; index >= 0; index--) {
-        reversedArr.push(arr[index]);
+        // reversedArr.push(arr[index]);
+        reversedArr[reversedArrIndex] = arr[index];
+        reversedArrIndex++;
     }
     return reversedArr;
 }
