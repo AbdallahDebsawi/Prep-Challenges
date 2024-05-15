@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function processData(input) {\n    // Define variables\n    var inputs = input.split(\"\\n\"),\n        noCandles = Number(inputs[0]),\n        arrCandles = inputs[1].split(\" \").map(Number),\n        greatestHeight = 0,\n        numCoincidences = 0;\n    // Run over array to get highest candles\n    for (var i = 0; i < noCandles; i++) {\n        if (greatestHeight < arrCandles[i]) {\n            greatestHeight = arrCandles[i];\n            numCoincidences = 1;\n        }\n        else {\n            if (greatestHeight == arrCandles[i])\n                numCoincidences += 1;\n        }\n\n    }\n    // Print answer\n    console.log(numCoincidences);\n}\n\nprocess.stdin.resume();\nprocess.stdin.setEncoding(\"ascii\");\n_input = \"\";\nprocess.stdin.on(\"data\", function (input) {\n    _input += input;\n});\n\nprocess.stdin.on(\"end\", function () {\n    processData(_input);\n});"
             ],
             "outputs": []
         },
